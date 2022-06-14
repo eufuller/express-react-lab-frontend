@@ -2,7 +2,7 @@ import './App.css';
 //Import components
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-import {Route} from "react-router-dom"
+import {Route, Switch} from "react-router-dom"
 
 //Import Pages
 import Home from "./pages/Home";
@@ -16,6 +16,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Switch>
         <Route exact path="/">
           <Home />
         </Route>
@@ -25,6 +26,7 @@ function App() {
         <Route path="/about">
           <About URL={URL} />
         </Route>
+        </Switch>
       <Footer />
     </div>
   );
