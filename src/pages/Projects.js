@@ -11,12 +11,12 @@ function Projects(props) {
     }
 
     useEffect(()=> {
-        getProjectsData();
+        getProjectsData()
     }, [])
 
 
-    const loaded= () => {
-    return Projects.map((project) => (
+    const loaded = () => {
+    return projects.map((project) => (
         <div>
             <h1>{project.name}</h1>
             <img src={project.image} alt= {project.name}/>
@@ -29,8 +29,8 @@ function Projects(props) {
                 <button>Live Site</button>
             </a>
         </div>
-    )) 
-}
+    )); 
+};
 
     return projects ? loaded() : <h1>Loading...</h1>
 }
